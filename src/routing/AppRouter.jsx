@@ -10,6 +10,8 @@ import logo from '../assets/logo.png';
 import { useContext } from "react";
 import { Context } from "../context/Context";
 import { DarkMode } from "../components/DarkMode";
+import { DetailArticle } from "../components/DetailArticle";
+import { Checkout } from "../components/Checkout";
 
 //un modulo de css es un archivo que es aparte de ls estilos de css; se crean unas clases unicas par 
 export const AppRouter = () => {
@@ -63,15 +65,17 @@ export const AppRouter = () => {
         </nav>
       </header>
       {/* Configurar rutas */}
-        <Routes className="content">
-          <Route path='/' element={<div className="content"><Home /></div>}></Route>
-          <Route path='/inicio' element={<div className="content"><Home/></div>}></Route>
-          <Route path='/articulos' element={<div className="content"><Articles /></div>}></Route>
-          <Route path='/acerca-de' element={<div className="content"><About /></div>}></Route>
-          <Route path='/contacto' element={<div className="content"><Contact /></div>}></Route>
-          <Route path='/login' element={<div className="content"><Login /></div>}></Route>
-          <Route path='*' element={<ErrorPage />}></Route>
-        </Routes>
+      <Routes>
+      <Route path='/' element={<div className="content"><Home /></div>}></Route>
+        <Route path='/inicio' element={<div className="content"><Home /></div>}></Route>
+        <Route path='/articulos' element={<div className="content"><Articles /></div>}></Route>
+        <Route path='/article/:id' element={<DetailArticle />}></Route>
+        <Route path='/checkout/:id' element={<Checkout />} />
+        <Route path='/acerca-de' element={<div className="content"><About /></div>}></Route>
+        <Route path='/contacto' element={<div className="content"><Contact /></div>}></Route>
+        <Route path='/login' element={<div className="content"><Login /></div>}></Route>
+        <Route path='*' element={<div className="error-page"><ErrorPage /></div>}></Route>
+      </Routes>
     </Router>
   )
 }
