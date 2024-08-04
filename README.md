@@ -1,4 +1,4 @@
-# Práctica de consumo de API REST
+# Práctica de Context API
 
 Este proyecto es una práctica de comunicación entre componentes con ContextAPI, Uuso de locla storage y manejo de login a nivel de front-end con React + Vite.
 
