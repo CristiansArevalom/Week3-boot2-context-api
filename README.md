@@ -55,7 +55,7 @@ Para ejecutar este proyecto en tu máquina local, sigue estos pasos:
 
 Se muestra panel de Login, que una vez inicia sesión, se actualiza el nav, se puede acceder al panel de articulos, el cual se alimenta con un FakeAPi 
 
-![Captura de Pantalla del Proyecto](../boot2-contextApi/src/assets/apiEvidencia.gif)
+![Captura de Pantalla del Proyecto](apiEvidencia.gif)
 ---
 
 ## Contribuciones
